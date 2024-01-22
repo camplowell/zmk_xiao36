@@ -17,3 +17,8 @@
 #     artifact-name: corne_left_with_logging
 #
 ---
+include:
+  - board: xiao_nrf52
+    shield: small36_left
+  - board: xiao_nrf52
+    shield: small36_right
