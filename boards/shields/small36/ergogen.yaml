@@ -1,0 +1,334 @@
+units:
+  xiao_width: 17.5
+  xiao_height: 21
+
+  keycap_size: 18
+
+  trrs_length: 12.1
+  trrs_width: 6.1
+
+  pwr_width: 7.8
+  pwr_depth: 3
+
+  battery_length: 31
+  battery_width: 11.5
+
+  jst_width: 5.9
+  jst_length: 9.6
+
+  # Configurable values
+  spacing: u
+  space_u: 1.5
+
+  bezel: 3
+  corner: 2
+
+  thumb_horizontal: 6
+  thumb_vertical: -2
+
+  ring_stagger: 0.66
+  middle_stagger: 0.25
+  index_stagger: -0.25
+  inner_stagger: -0.15
+  xiao_stagger: -0.20
+
+  thumb_radius: 90
+  thumb_sweep_left: 3
+
+  # Non-configurable
+  visual_x: 1
+  visual_y: 1
+
+  gap: spacing - keycap_size
+
+  space_keycap: space_u * keycap_size
+  space_spacing: 0.5 * (keycap_size + space_keycap) + gap
+  space_shift: 0.5 * (keycap_size - space_keycap)
+
+points:
+  zones:
+    matrix:
+      key:
+        width: keycap_size
+        height: keycap_size
+        padding: spacing
+        tags:
+          key_1u: true
+        # Footprints for key-switches.  
+        footprints: &key_footprints
+          switch:
+            type: mx_choc_hybrid
+            params:
+              keycaps: true
+              reverse: true
+              hotswap_mx: true
+              hotswap_choc: false
+            nets:
+              from: =column_net
+              to: =colrow
+          diode:
+            type: diode
+            nets:
+              from: =colrow
+              to: =row_net
+            anchor:
+              shift: [0, 8]
+      columns:
+        pinky:
+          key.column_net: P6
+        ring:
+          stagger: ring_stagger * spacing
+          spread: spacing
+          key.column_net: P7
+        middle:
+          stagger: middle_stagger * spacing
+          spread: spacing
+          key.column_net: P2
+        index:
+          stagger: index_stagger * spacing
+          spread: spacing
+          key.column_net: P4
+        inner:
+          stagger: inner_stagger * spacing
+          spread: spacing
+          key.column_net: P3
+      rows:
+        bottom:
+          row_net: P28
+        home:
+          row_net: P27
+        top:
+          row_net: P26
+    thumb:
+      anchor:
+        ref: matrix_index_bottom
+        shift: [-0.5spacing + space_shift + thumb_horizontal, -spacing + thumb_vertical]
+      key:
+        width: keycap_size
+        height: keycap_size
+        footprints: *key_footprints
+      rows:
+        default:
+          row_net: P29
+      columns:
+        tuck:
+          key.name: thumb_tuck
+          key.column_net: P2
+          key.tags:
+            key_1u: true
+        home:
+          spread: space_spacing
+          rotate: -15
+          origin: [-(0.5 space_keycap + 0.5 gap), -0.5 keycap_size]
+          key.name: thumb_home
+          key.width: space_keycap
+          key.column_net: P4
+          key.tags: 
+            key_space: true
+        reach:
+          spread: space_spacing
+          rotate: -20
+          origin: [-0.5 spacing, -0.5 keycap_size]
+          key.name: thumb_reach
+          key.column_net: P3
+          key.tags:
+            key_1u: true
+
+    mcu:
+      anchor:
+        ref: matrix_inner_top
+        shift: [0.5 * keycap_size + 2 * gap, 0.5 * keycap_size]
+      key:
+        width: xiao_width
+        height: xiao_height
+        shift: [0.5 * xiao_width, -0.5 * xiao_height]
+    battery:
+      anchor:
+        ref: mcu_default_default
+        shift: [-0.5 * xiao_width, -0.5 * xiao_height - gap]
+      key:
+        width: battery_width
+        height: battery_length
+        shift: [0.5 * battery_width, -0.5 * battery_length]
+    trrs:
+      anchor:
+        - ref: mcu_default_default
+          shift: [0.5 * xiao_width + gap - 1, 0]
+        - ref: battery_default_default
+          shift: [0, -0.5 * battery_length - gap]
+          affect: y
+      key:
+        width: trrs_length
+        height: trrs_width
+        shift: [-0.5 * trrs_length, -0.5 * trrs_width]
+    power_switch:
+      anchor:
+        ref: trrs_default_default
+        shift: [0.5 * (trrs_length - pwr_depth), 0.5 * (trrs_width + pwr_width) + gap]
+      key:
+        width: pwr_depth
+        height: pwr_width
+    jst:
+      anchor:
+        ref: power_switch_default_default
+        shift: [0.5 * pwr_depth, 0.5 * pwr_width + gap]
+      key:
+        width: jst_width
+        height: jst_length
+        shift: [-0.5 * jst_width, 0.5 * jst_length]
+    
+
+outlines:
+  exports:
+    placement:
+      - type: keys
+        side: left
+        size: [ keycap_size, keycap_size ]
+        tags: [key_1u]
+      - type: keys
+        side: left
+        size: [ space_keycap, keycap_size ]
+        tags: [key_space]
+      - type: rectangle
+        anchor:
+          ref: mcu_default_default
+          shift: [-0.5 * xiao_width, -0.5 * xiao_height]
+        size: [xiao_width, xiao_height]
+      - type: rectangle
+        anchor:
+          ref: trrs_default_default
+          shift: [-0.5 * trrs_length, -0.5 * trrs_width]
+        size: [trrs_length, trrs_width]
+      - type: rectangle
+        anchor:
+          ref: power_switch_default_default
+          shift: [ -0.5 * pwr_depth, -0.5 * pwr_width ]
+        size: [ pwr_depth, pwr_width ]
+    big_shapes:
+      - type: rectangle
+        anchor:
+          - ref: matrix_inner_bottom
+            shift: [0.5 * keycap_size, 0]
+          - ref: thumb_tuck
+            shift: [0, -0.5 * keycap_size - bezel]
+            affect: y
+        size: [xiao_width + 3 gap, 3 * keycap_size]
+      - type: rectangle
+        anchor: 
+          - ref: matrix_pinky_bottom
+            shift: [-0.5 * keycap_size - bezel, -0.5 * keycap_size - bezel]
+          - ref: thumb_tuck
+            shift: [0, -0.5 * keycap_size - bezel]
+            affect: y
+        size: [ 5 * spacing + xiao_width + gap + bezel, 2 * spacing + 2 * bezel]
+        corner: 10
+      - type: rectangle
+        anchor:
+          ref: thumb_reach
+          shift: [-2.5 * keycap_size - bezel, -0.5 * keycap_size - bezel]
+        size: [3 * keycap_size + 2 * bezel, keycap_size + 2 * bezel]
+        corner: corner
+      - type: rectangle
+        anchor:
+          ref: thumb_tuck
+          shift: [-thumb_sweep_left, -29]
+        size: [50 + thumb_sweep_left, 28]
+      - type: circle
+        anchor:
+          ref: thumb_tuck
+          shift: [-thumb_sweep_left, -thumb_radius - 0.5 * keycap_size - bezel]
+        radius: thumb_radius
+        operation: subtract
+    big_shapes2:
+      - type: outline
+        name: big_shapes
+        fillet: 18
+    big_shapes3:
+      - type: outline
+        name: big_shapes2
+        fillet: 8
+    cutout:
+      - type: keys
+        side: left
+        size: [keycap_size + 2bezel, keycap_size + 2bezel]
+        corner: 2
+        tags: [key_1u]
+      - type: rectangle
+        anchor:
+          - ref: mcu_default_default
+            shift: [-0.5 xiao_width - corner, 0.5 (xiao_height) - 3spacing]
+        size: [xiao_width + gap + corner, 3spacing + gap]
+        corner: corner
+      - type: outline
+        name: big_shapes3
+    preview:
+      - type: outline
+        name: cutout
+      - type: outline
+        name: placement
+        operation: stack
+
+pcbs:
+  board:
+    outlines:
+      cuts:
+        outline: cutout
+        layer: Edge.Cuts
+    footprints:
+      xiao:
+        type: xiao
+        anchor:
+          ref: mcu_default_default
+      trrs:
+        type: trrs
+        anchor:
+          ref: trrs_default_default
+          rotate: -90
+          shift: [6.05, -2.3]
+        nets:
+          A: GND
+          B: GND
+          C: P0
+          D: RAW
+        params:
+          reverse: true
+          symmetric: true
+      power_switch:
+        type: slider
+        anchor:
+          ref: power_switch_default_default
+          rotate: -90
+        nets:
+          from: BAT
+          to: BAT2
+      power_switch_back:
+        type: slider
+        anchor:
+          ref: power_switch_default_default
+          rotate: -90
+        nets:
+          from: BAT
+          to: BAT2
+        params:
+          side: 'B'
+      jst:
+        type: jstph
+        anchor:
+          ref: jst_default_default
+          shift: [0, 0]
+          rotate: 180
+        nets:
+          pos: BAT2
+          neg: GND
+      jst2:
+        type: jstph
+        anchor:
+          ref: jst_default_default
+          shift: [0, -2.5]
+          rotate: 180
+        params:
+          side: 'B'
+        nets:
+          pos: BAT2
+          neg: GND
+

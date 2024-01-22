@@ -1,0 +1,12 @@
+file_format: "1"
+id: small36
+name: small36
+type: shield
+url: https://github.com/camplowell/zmk_xiao36
+requires: [xiao_nrf52]
+exposes: []
+features:
+  - keys
+siblings:
+  - small36_left
+  - small36_right
