@@ -1,5 +1,9 @@
 #include "small36.dtsi"
 
+&default_transform { // The matrix transform for this board is 5 columns over because the left half is 5 columns wide according to the matrix.
+    col-offset = <5>;
+};
+
 &kscan0 {
 	col-gpios = 
 		<&xiao_d 10 GPIO_ACTIVE_HIGH>,
@@ -7,4 +11,4 @@
 		<&xiao_d 8  GPIO_ACTIVE_HIGH>,
 		<&xiao_d 5  GPIO_ACTIVE_HIGH>,
 		<&xiao_d 4  GPIO_ACTIVE_HIGH>;
-}
+};
