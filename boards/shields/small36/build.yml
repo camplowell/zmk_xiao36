@@ -13,7 +13,7 @@
 #
 ---
 include:
-  - board: xiao_nrf52
+  - board: seeeduino_xiao_ble
     shield: small36_left
-  - board: xiao_nrf52
+  - board: seeeduino_xiao_ble
     shield: small36_right

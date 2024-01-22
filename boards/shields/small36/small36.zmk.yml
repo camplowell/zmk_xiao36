@@ -3,7 +3,7 @@ id: small36
 name: small36
 type: shield
 url: https://github.com/camplowell/zmk_xiao36
-requires: [xiao_nrf52]
+requires: [seeeduino_xiao_ble]
 exposes: []
 features:
   - keys
