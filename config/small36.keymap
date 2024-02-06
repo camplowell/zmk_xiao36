@@ -121,6 +121,786 @@
     };
   };
 
+  combos {
+    compatible = "zmk,combos";
+
+    public {
+      bindings = <&mc_public>;
+      key-positions = <3 4>;
+      layers = <0>;
+    };
+
+    private {
+      bindings = <&mc_private>;
+      key-positions = <3 11>;
+      layers = <0>;
+    };
+
+    protected {
+      bindings = <&mc_protected>;
+      key-positions = <3 11 19>;
+      layers = <0>;
+    };
+
+    continue {
+      bindings = <&mc_continue>;
+      key-positions = <22 7>;
+      layers = <0>;
+    };
+
+    break {
+      bindings = <&mc_break>;
+      key-positions = <4 25>;
+      layers = <0>;
+    };
+
+    return {
+      bindings = <&mc_return>;
+      key-positions = <11 13>;
+      layers = <0>;
+    };
+
+    throw {
+      bindings = <&mc_throw>;
+      key-positions = <1 13 11>;
+      layers = <0>;
+    };
+
+    raise {
+      bindings = <&mc_raise>;
+      key-positions = <11 12 18>;
+      layers = <0>;
+    };
+
+    assert {
+      bindings = <&mc_assert>;
+      key-positions = <10 12 13>;
+      layers = <0>;
+    };
+
+    print {
+      bindings = <&mc_print>;
+      key-positions = <3 13>;
+      layers = <0>;
+    };
+
+    println {
+      bindings = <&mc_println>;
+      key-positions = <3 13 6>;
+      layers = <0>;
+    };
+
+    stdout {
+      bindings = <&mc_stdout>;
+      key-positions = <13 12 19>;
+      layers = <0>;
+    };
+
+    gl_pragma {
+      bindings = <&mc_glsl_pragma>;
+      key-positions = <3 14 19>;
+      layers = <0>;
+    };
+
+    version {
+      bindings = <&mc_version>;
+      key-positions = <11 24>;
+      layers = <0>;
+    };
+
+    anti {
+      bindings = <&mc_anti>;
+      key-positions = <13 18>;
+      layers = <0>;
+    };
+
+    auto {
+      bindings = <&mc_auto>;
+      key-positions = <10 13 19>;
+      layers = <0>;
+    };
+
+    circum {
+      bindings = <&mc_circum>;
+      key-positions = <22 15>;
+      layers = <0>;
+    };
+
+    counter {
+      bindings = <&mc_counter>;
+      key-positions = <11 22 13>;
+      layers = <0>;
+    };
+
+    contra {
+      bindings = <&mc_contra>;
+      key-positions = <10 11 22>;
+      layers = <0>;
+    };
+
+    equi {
+      bindings = <&mc_equi>;
+      key-positions = <0 18 17>;
+      layers = <0>;
+    };
+
+    extra {
+      bindings = <&mc_extra>;
+      key-positions = <11 21 13>;
+      layers = <0>;
+    };
+
+    hetero {
+      bindings = <&mc_hetero>;
+      key-positions = <26 11 19>;
+      layers = <0>;
+    };
+
+    homo {
+      bindings = <&mc_homo>;
+      key-positions = <14 19>;
+      layers = <0>;
+    };
+
+    hyper {
+      bindings = <&mc_hyper>;
+      key-positions = <3 26>;
+      layers = <0>;
+    };
+
+    intra {
+      bindings = <&none>;
+      key-positions = <11 13 18>;
+      layers = <0>;
+    };
+
+    inter {
+      bindings = <&mc_inter>;
+      key-positions = <11 13 17>;
+      layers = <0>;
+    };
+
+    magn {
+      bindings = <&mc_magn>;
+      key-positions = <15 16>;
+      layers = <0>;
+    };
+
+    micro {
+      bindings = <&mc_micro>;
+      key-positions = <15 11>;
+      layers = <0>;
+    };
+
+    mono {
+      bindings = <&mc_mono>;
+      key-positions = <15 16 19>;
+      layers = <0>;
+    };
+
+    multi {
+      bindings = <&mc_multi>;
+      key-positions = <15 6>;
+      layers = <0>;
+    };
+
+    over {
+      bindings = <&mc_over>;
+      key-positions = <11 24>;
+      layers = <0>;
+    };
+
+    pseudo {
+      bindings = <&mc_pseudo>;
+      key-positions = <3 7 17>;
+      layers = <0>;
+    };
+
+    retro {
+      bindings = <&mc_retro>;
+      key-positions = <11 13 19>;
+      layers = <0>;
+    };
+
+    milli {
+      bindings = <&mc_milli>;
+      key-positions = <15 18>;
+      layers = <0>;
+    };
+
+    kilo {
+      bindings = <&mc_kilo>;
+      key-positions = <25 19>;
+      layers = <0>;
+    };
+
+    semi {
+      bindings = <&mc_semi>;
+      key-positions = <12 18>;
+      layers = <0>;
+    };
+
+    able {
+      bindings = <&mc_able>;
+      key-positions = <4 6>;
+      layers = <0>;
+    };
+
+    ance {
+      bindings = <&mc_ance>;
+      key-positions = <16 22 10>;
+      layers = <0>;
+    };
+
+    ence {
+      bindings = <&mc_ence>;
+      key-positions = <22 16 17>;
+      layers = <0>;
+    };
+
+    ible {
+      bindings = <&mc_ible>;
+      key-positions = <4 6 18>;
+      layers = <0>;
+    };
+
+    ious {
+      bindings = <&mc_ious>;
+      key-positions = <12 7>;
+      layers = <0>;
+    };
+
+    less {
+      bindings = <&mc_less>;
+      key-positions = <12 6>;
+      layers = <0>;
+    };
+
+    some {
+      bindings = <&mc_some>;
+      key-positions = <12 15>;
+      layers = <0>;
+    };
+
+    ward {
+      bindings = <&mc_ward>;
+      key-positions = <1 11>;
+      layers = <0>;
+    };
+
+    ation {
+      bindings = <&mc_ation>;
+      key-positions = <10 16 13>;
+      layers = <0>;
+    };
+
+    tion {
+      bindings = <&mc_tion>;
+      key-positions = <13 16>;
+      layers = <0>;
+    };
+
+    tude {
+      bindings = <&mc_tude>;
+      key-positions = <13 23>;
+      layers = <0>;
+    };
+
+    cause {
+      bindings = <&mc_cause>;
+      key-positions = <22 12>;
+      layers = <0>;
+    };
+
+    ment {
+      bindings = <&mc_ment>;
+      key-positions = <15 13>;
+      layers = <0>;
+    };
+
+    about {
+      bindings = <&about>;
+      key-positions = <10 4>;
+      layers = <0>;
+    };
+
+    have {
+      bindings = <&mc_have>;
+      key-positions = <24 26>;
+      layers = <0>;
+    };
+
+    ould {
+      bindings = <&mc_ould>;
+      key-positions = <6 23>;
+      layers = <0>;
+    };
+
+    make {
+      bindings = <&mc_make>;
+      key-positions = <15 25>;
+      layers = <0>;
+    };
+
+    until {
+      bindings = <&mc_until>;
+      key-positions = <6 13>;
+      layers = <0>;
+    };
+
+    youre {
+      bindings = <&mc_youre>;
+      key-positions = <8 11>;
+      layers = <0>;
+    };
+
+    your {
+      bindings = <&mc_your>;
+      key-positions = <7 11>;
+      layers = <0>;
+    };
+
+    what {
+      bindings = <&mc_what>;
+      key-positions = <1 10>;
+      layers = <0>;
+    };
+
+    which {
+      bindings = <&mc_which>;
+      key-positions = <22 26>;
+      layers = <0>;
+    };
+
+    with {
+      bindings = <&mc_with>;
+      key-positions = <1 18>;
+      layers = <0>;
+    };
+  };
+
+  macros {
+    mc_public: mc_public {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp P &kp U &kp B &kp L &kp I &kp C>;
+      label = "MC_PUBLIC";
+    };
+
+    mc_private: mc_private {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp P &kp R &kp I &kp V &kp A &kp T &kp E>;
+      label = "MC_PRIVATE";
+    };
+
+    mc_protected: mc_protected {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp P &kp R &kp O &kp T &kp E &kp C &kp T &kp E &kp D>;
+      label = "MC_PROTECTED";
+    };
+
+    mc_layout: mc_layout {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp L &kp A &kp Y &kp O &kp U &kp T &kp LPAR &kp L &kp O &kp C &kp A &kp T &kp I &kp O &kp N &kp SPACE &kp EQUAL &kp SPACE>;
+      label = "MC_LAYOUT";
+    };
+
+    mc_continue: mc_continue {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp C &kp O &kp N &kp T &kp I &kp N &kp U &kp E>;
+      label = "MC_CONTINUE";
+    };
+
+    mc_break: mc_break {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp B &kp R &kp E &kp A &kp K>;
+      label = "MC_BREAK";
+    };
+
+    mc_return: mc_return {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp R &kp E &kp T &kp U &kp R &kp N>;
+      label = "MC_RETURN";
+    };
+
+    mc_throw: mc_throw {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp T &kp H &kp R &kp O &kp W>;
+      label = "MC_THROW";
+    };
+
+    mc_raise: mc_raise {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp R &kp A &kp I &kp S &kp E>;
+      label = "MC_RAISE";
+    };
+
+    mc_assert: mc_assert {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp A &kp S &kp S &kp E &kp R &kp T>;
+      label = "MC_ASSERT";
+    };
+
+    mc_print: mc_print {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp P &kp R &kp I &kp N &kp T>;
+      label = "MC_PRINT";
+    };
+
+    mc_println: mc_println {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp P &kp R &kp I &kp N &kp T &kp L &kp N>;
+      label = "MC_PRINTLN";
+    };
+
+    mc_stdout: mc_stdout {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp S &kp T &kp D &kp COLON &kp COLON &kp C &kp O &kp U &kp T &kp SPACE &kp LT &kp LT &kp SPACE>;
+      label = "MC_STDOUT";
+    };
+
+    mc_glsl_pragma: mc_glsl_pragma {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp POUND &kp I &kp F &kp SPACE &kp EXCL &kp D &kp E &kp F &kp I &kp N &kp E &kp D &kp LPAR &kp LS(P) &kp LS(R) &kp LS(A) &kp LS(G) &kp LS(M) &kp LS(A) &kp RIGHT &kp RET &kp POUND &kp D &kp E &kp F &kp I &kp N &kp E &kp SPACE &kp LS(P) &kp LS(R) &kp LS(A) &kp LS(G) &kp LS(M) &kp LS(A) &kp ENTER &kp RET &kp RET &kp RET &kp RET &kp POUND &kp E &kp N &kp D &kp I &kp F &kp SPACE &kp FSLH &kp FSLH &kp SPACE &kp LS(E) &kp LS(O) &kp LS(F) &kp UP &kp UP &kp UP &kp UP &kp LS(LC(RIGHT)) &kp LG(D)>;
+      label = "MC_GLSL_PRAGMA";
+    };
+
+    mc_version: mc_version {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp V &kp E &kp R &kp S &kp I &kp O &kp N>;
+      label = "MC_VERSION";
+    };
+
+    mc_anti: mc_anti {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp A &kp N &kp T &kp I>;
+      label = "MC_ANTI";
+    };
+
+    mc_auto: mc_auto {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp A &kp U &kp T &kp O>;
+      label = "MC_AUTO";
+    };
+
+    mc_circum: mc_circum {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp C &kp I &kp R &kp C &kp U &kp M>;
+      label = "MC_CIRCUM";
+    };
+
+    mc_counter: mc_counter {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp C &kp O &kp U &kp N &kp T &kp E &kp R>;
+      label = "MC_COUNTER";
+    };
+
+    mc_contra: mc_contra {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp C &kp O &kp N &kp T &kp R &kp A>;
+      label = "MC_CONTRA";
+    };
+
+    mc_equi: mc_equi {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp E &kp Q &kp U &kp I>;
+      label = "MC_EQUI";
+    };
+
+    mc_extra: mc_extra {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp E &kp X &kp T &kp R &kp A>;
+      label = "MC_EXTRA";
+    };
+
+    mc_hetero: mc_hetero {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp H &kp E &kp T &kp E &kp R &kp O>;
+      label = "MC_HETERO";
+    };
+
+    mc_homo: mc_homo {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp H &kp O &kp M &kp O>;
+      label = "MC_HOMO";
+    };
+
+    mc_hyper: mc_hyper {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp H &kp Y &kp P &kp E &kp R>;
+      label = "MC_HYPER";
+    };
+
+    mc_intra: mc_intra {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp I &kp N &kp T &kp R &kp A>;
+      label = "MC_INTRA";
+    };
+
+    mc_inter: mc_inter {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp I &kp N &kp T &kp E &kp R>;
+      label = "MC_INTER";
+    };
+
+    mc_magn: mc_magn {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp M &kp A &kp G &kp N>;
+      label = "MC_MAGN";
+    };
+
+    mc_micro: mc_micro {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp M &kp I &kp C &kp R &kp O>;
+      label = "MC_MICRO";
+    };
+
+    mc_mono: mc_mono {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp M &kp O &kp N &kp O>;
+      label = "MC_MONO";
+    };
+
+    mc_multi: mc_multi {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp M &kp U &kp L &kp T &kp I>;
+      label = "MC_MULTI";
+    };
+
+    mc_over: mc_over {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp O &kp V &kp E &kp R>;
+      label = "MC_OVER";
+    };
+
+    mc_pseudo: mc_pseudo {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp P &kp S &kp E &kp U &kp D &kp O>;
+      label = "MC_PSEUDO";
+    };
+
+    mc_retro: mc_retro {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp R &kp E &kp T &kp R &kp O>;
+      label = "MC_RETRO";
+    };
+
+    mc_milli: mc_milli {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp M &kp I &kp L &kp L &kp I>;
+      label = "MC_MILLI";
+    };
+
+    mc_kilo: mc_kilo {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp K &kp I &kp L &kp O>;
+      label = "MC_KILO";
+    };
+
+    mc_semi: mc_semi {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp S &kp E &kp M &kp I>;
+      label = "MC_SEMI";
+    };
+
+    mc_able: mc_able {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp A &kp B &kp L &kp E>;
+      label = "MC_ABLE";
+    };
+
+    mc_ance: mc_ance {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp A &kp N &kp C &kp E>;
+      label = "MC_ANCE";
+    };
+
+    mc_ence: mc_ence {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp E &kp N &kp C &kp E>;
+      label = "MC_ENCE";
+    };
+
+    mc_ible: mc_ible {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp I &kp B &kp L &kp E>;
+      label = "MC_IBLE";
+    };
+
+    mc_ious: mc_ious {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp I &kp O &kp U &kp S>;
+      label = "MC_IOUS";
+    };
+
+    mc_less: mc_less {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp L &kp E &kp S &kp S>;
+      label = "MC_LESS";
+    };
+
+    mc_some: mc_some {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp S &kp O &kp M &kp E>;
+      label = "MC_SOME";
+    };
+
+    mc_ward: mc_ward {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp W &kp A &kp R &kp D>;
+      label = "MC_WARD";
+    };
+
+    mc_ation: mc_ation {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp A &kp T &kp I &kp O &kp N>;
+      label = "MC_ATION";
+    };
+
+    mc_tude: mc_tude {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp T &kp U &kp D &kp E>;
+      label = "MC_TUDE";
+    };
+
+    mc_cause: mc_cause {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp C &kp A &kp U &kp S &kp E>;
+      label = "MC_CAUSE";
+    };
+
+    mc_ment: mc_ment {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp M &kp E &kp N &kp T>;
+      label = "MC_MENT";
+    };
+
+    about: about {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp A &kp B &kp O &kp U &kp T>;
+      label = "ABOUT";
+    };
+
+    mc_have: mc_have {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp H &kp A &kp V &kp E>;
+      label = "MC_HAVE";
+    };
+
+    mc_tion: mc_tion {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp T &kp I &kp O &kp N>;
+      label = "MC_TION";
+    };
+
+    mc_ould: mc_would {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp O &kp U &kp L &kp D>;
+      label = "MC_WOULD";
+    };
+
+    mc_make: mc_make {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp M &kp A &kp K &kp E>;
+      label = "MC_MAKE";
+    };
+
+    mc_until: mc_until {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp U &kp N &kp T &kp I &kp L>;
+      label = "MC_UNTIL";
+    };
+
+    mc_youre: mc_youre {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp Y &kp O &kp U &kp SQT &kp R &kp E>;
+      label = "MC_YOURE";
+    };
+
+    mc_your: mc_your {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp Y &kp O &kp U &kp R>;
+      label = "MC_YOUR";
+    };
+
+    mc_what: mc_what {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp W &kp H &kp A &kp T>;
+      label = "MC_WHAT";
+    };
+
+    mc_which: mc_which {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp W &kp H &kp I &kp C &kp H>;
+      label = "MC_WHICH";
+    };
+
+    mc_with: mc_with {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp W &kp I &kp T &kp H>;
+      label = "MC_WITH";
+    };
+  };
+
   keymap {
     compatible = "zmk,keymap";
 
@@ -135,19 +915,19 @@
 
     QWERTY {
       bindings = <
-        &kp Q  &kp W  &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I     &kp O    &kp P
-        &kp A  &kp S  &kp D   &kp F   &kp G   &kp H   &kp J   &kp K     &kp L    &kp SQT
-        &kp Z  &kp X  &kp C   &kp V   &kp B   &kp N   &kp M   &cm_excl  &dot_qm  &kp SEMICOLON
-                      &trans  &trans  &trans  &trans  &trans  &trans
+        &kp Q  &kp W  &kp E  &kp R       &kp T        &kp Y      &kp U     &kp I     &kp O    &kp P
+        &kp A  &kp S  &kp D  &kp F       &kp G        &kp H      &kp J     &kp K     &kp L    &kp SQT
+        &kp Z  &kp X  &kp C  &kp V       &kp B        &kp N      &kp M     &cm_excl  &dot_qm  &kp SEMICOLON
+                      &sl 4  &multi_sft  &key_repeat  &kp ENTER  &dyn_spc  &sl 5
       >;
     };
 
     GAMING {
       bindings = <
-        &kp TAB    &kp Q  &kp W  &kp E      &kp R  &none   &none  &none  &none  &none
-        &kp RSHFT  &kp A  &kp S  &kp D      &kp F  &none   &none  &none  &none  &none
-        &kp LCTRL  &kp Z  &kp X  &kp C      &kp G  &none   &none  &none  &none  &none
-                          &sl 3  &kp SPACE  &kp V  &tog 2  &none  &none
+        &kp TAB     &kp Q  &kp X  &kp E      &kp R  &none   &none  &none  &none  &none
+        &kp LSHIFT  &kp A  &kp W  &kp D      &kp F  &none   &none  &none  &none  &none
+        &kp LCTRL   &kp Z  &kp S  &kp C      &kp G  &none   &none  &none  &none  &none
+                           &sl 3  &kp SPACE  &kp V  &tog 2  &none  &none
       >;
     };
 
