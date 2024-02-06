@@ -126,64 +126,64 @@
 
     COLEMAK {
       bindings = <
-        &kp Q  &kp W  &kp F  &kp P  &kp B                               &kp J     &kp L  &kp U     &kp Y    &kp SQT
-        &kp A  &kp R  &kp S  &kp T  &kp G                               &kp M     &kp N  &kp E     &kp I    &kp O
-        &kp Z  &kp X  &kp C  &kp D  &kp V                               &kp K     &kp H  &cm_excl  &dot_qm  &kp SEMI
-                             &sl 4  &multi_sft  &key_repeat  &kp ENTER  &dyn_spc  &sl 5
+        &kp Q  &kp W  &kp F  &kp P       &kp B        &kp J      &kp L     &kp U     &kp Y    &kp SQT
+        &kp A  &kp R  &kp S  &kp T       &kp G        &kp M      &kp N     &kp E     &kp I    &kp O
+        &kp Z  &kp X  &kp C  &kp D       &kp V        &kp K      &kp H     &cm_excl  &dot_qm  &kp SEMI
+                      &sl 4  &multi_sft  &key_repeat  &kp ENTER  &dyn_spc  &sl 5
       >;
     };
 
     QWERTY {
       bindings = <
-        &kp Q  &kp W  &kp E  &kp R   &kp T                   &kp Y   &kp U   &kp I     &kp O    &kp P
-        &kp A  &kp S  &kp D  &kp F   &kp G                   &kp H   &kp J   &kp K     &kp L    &kp SQT
-        &kp Z  &kp X  &kp C  &kp V   &kp B                   &kp N   &kp M   &cm_excl  &dot_qm  &kp SEMICOLON
-                             &trans  &trans  &trans  &trans  &trans  &trans
+        &kp Q  &kp W  &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I     &kp O    &kp P
+        &kp A  &kp S  &kp D   &kp F   &kp G   &kp H   &kp J   &kp K     &kp L    &kp SQT
+        &kp Z  &kp X  &kp C   &kp V   &kp B   &kp N   &kp M   &cm_excl  &dot_qm  &kp SEMICOLON
+                      &trans  &trans  &trans  &trans  &trans  &trans
       >;
     };
 
     GAMING {
       bindings = <
-        &kp TAB    &kp Q  &kp W  &kp E  &kp R                     &none  &none  &none  &none  &none
-        &kp RSHFT  &kp A  &kp S  &kp D  &kp F                     &none  &none  &none  &none  &none
-        &kp LCTRL  &kp Z  &kp X  &kp C  &kp G                     &none  &none  &none  &none  &none
-                                 &sl 3  &kp SPACE  &kp V  &tog 2  &none  &none
+        &kp TAB    &kp Q  &kp W  &kp E      &kp R  &none   &none  &none  &none  &none
+        &kp RSHFT  &kp A  &kp S  &kp D      &kp F  &none   &none  &none  &none  &none
+        &kp LCTRL  &kp Z  &kp X  &kp C      &kp G  &none   &none  &none  &none  &none
+                          &sl 3  &kp SPACE  &kp V  &tog 2  &none  &none
       >;
     };
 
     GM_NUM {
       bindings = <
-        &kp ESC  &kp N7  &kp N8  &kp N9  &trans                  &trans  &trans  &trans  &trans  &trans
-        &kp N0   &kp N4  &kp N5  &kp N6  &trans                  &trans  &trans  &trans  &trans  &trans
-        &trans   &kp N1  &kp N2  &kp N3  &trans                  &trans  &trans  &trans  &trans  &trans
-                                 &trans  &trans  &trans  &trans  &trans  &trans
+        &kp ESC  &kp N7  &kp N8  &kp N9  &tog 2  &trans  &trans  &trans  &trans  &trans
+        &kp N0   &kp N4  &kp N5  &kp N6  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans   &kp N1  &kp N2  &kp N3  &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans  &trans  &trans  &trans  &trans  &trans
       >;
     };
 
     NAV {
       bindings = <
-        &kp ESC    &kp HOME   &kp UP        &kp END    &trans                             &trans     &kp AT   &kp HASH  &trans    &trans
-        &sk LSHFT  &kp LEFT   &kp DOWN      &kp RIGHT  &kp TAB                            &trans     &par     &bkt      &brc      &tbkt
-        &sk LSHFT  &sk LCTRL  &sk LEFT_ALT  &sk LGUI   &kp ENTER                          &kp CARET  &vkp_eq  &kp EXCL  &kp AMPS  &kp PIPE
-                                            &trans     &kp SPACE  &kp ENTER  &key_repeat  &kp UNDER  &trans
+        &kp ESC    &kp HOME   &kp UP        &kp END    &tog 2     &trans       &kp AT     &kp HASH  &trans    &trans
+        &sk LSHFT  &kp LEFT   &kp DOWN      &kp RIGHT  &kp TAB    &trans       &par       &bkt      &brc      &tbkt
+        &sk LSHFT  &sk LCTRL  &sk LEFT_ALT  &sk LGUI   &kp ENTER  &kp CARET    &vkp_eq    &kp EXCL  &kp AMPS  &kp PIPE
+                              &trans        &kp SPACE  &kp ENTER  &key_repeat  &kp UNDER  &trans
       >;
     };
 
     NUM {
       bindings = <
-        &kp GRAVE      &kp PRCNT  &kp DLLR   &kp LPAR  &kp RPAR                   &trans  &kp N7  &kp N8  &kp N9  &bk_del
-        &kp LS(CARET)  &kp STAR   &kp PLUS   &vkp_eq   &trans                     &trans  &kp N4  &kp N5  &kp N6  &kp N0
-        &trans         &kp FSLH   &kp MINUS  &kp DOT   &kp COMMA                  &trans  &kp N1  &kp N2  &kp N3  &kp N0
-                                             &trans    &trans     &trans  &trans  &trans  &trans
+        &kp GRAVE      &kp PRCNT  &kp DLLR   &kp LPAR  &kp RPAR   &trans  &kp N7  &kp N8  &kp N9  &bk_del
+        &kp LS(CARET)  &kp STAR   &kp PLUS   &vkp_eq   &trans     &trans  &kp N4  &kp N5  &kp N6  &kp N0
+        &trans         &kp FSLH   &kp MINUS  &kp DOT   &kp COMMA  &trans  &kp N1  &kp N2  &kp N3  &kp N0
+                                  &trans     &trans    &trans     &trans  &trans  &trans
       >;
     };
 
     EXTRA {
       bindings = <
-        &kp TILDE  &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PG_UP  &trans                  &none      &kp F7  &kp F8  &kp F9  &kp F10
-        &trans     &kp INS          &kp KP_NUMLOCK  &kp PG_DN  &trans                  &base_sel  &kp F4  &kp F5  &kp F6  &kp F11
-        &trans     &kp BSLH         &trans          &trans     &trans                  &none      &kp F1  &kp F2  &kp F3  &kp F12
-                                                    &trans     &trans  &trans  &trans  &trans     &trans
+        &kp TILDE  &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PG_UP  &trans  &none      &kp F7  &kp F8  &kp F9  &kp F10
+        &trans     &kp INS          &kp KP_NUMLOCK  &kp PG_DN  &trans  &base_sel  &kp F4  &kp F5  &kp F6  &kp F11
+        &trans     &kp BSLH         &trans          &trans     &trans  &none      &kp F1  &kp F2  &kp F3  &kp F12
+                                    &trans          &trans     &trans  &trans     &trans  &trans
       >;
     };
   };
