@@ -138,7 +138,7 @@
 
     protected {
       bindings = <&mc_protected>;
-      key-positions = <3 11 19>;
+      key-positions = <3 19>;
       layers = <0>;
     };
 
@@ -198,85 +198,31 @@
 
     gl_pragma {
       bindings = <&mc_glsl_pragma>;
-      key-positions = <3 14 19>;
+      key-positions = <3 14>;
       layers = <0>;
     };
 
     version {
       bindings = <&mc_version>;
-      key-positions = <11 24>;
-      layers = <0>;
-    };
-
-    anti {
-      bindings = <&mc_anti>;
-      key-positions = <13 18>;
+      key-positions = <24 12>;
       layers = <0>;
     };
 
     auto {
       bindings = <&mc_auto>;
-      key-positions = <10 13 19>;
-      layers = <0>;
-    };
-
-    circum {
-      bindings = <&mc_circum>;
-      key-positions = <22 15>;
+      key-positions = <10 7>;
       layers = <0>;
     };
 
     counter {
       bindings = <&mc_counter>;
-      key-positions = <11 22 13>;
-      layers = <0>;
-    };
-
-    contra {
-      bindings = <&mc_contra>;
-      key-positions = <10 11 22>;
-      layers = <0>;
-    };
-
-    equi {
-      bindings = <&mc_equi>;
-      key-positions = <0 18 17>;
+      key-positions = <22 13>;
       layers = <0>;
     };
 
     extra {
       bindings = <&mc_extra>;
-      key-positions = <11 21 13>;
-      layers = <0>;
-    };
-
-    hetero {
-      bindings = <&mc_hetero>;
-      key-positions = <26 11 19>;
-      layers = <0>;
-    };
-
-    homo {
-      bindings = <&mc_homo>;
-      key-positions = <14 19>;
-      layers = <0>;
-    };
-
-    hyper {
-      bindings = <&mc_hyper>;
-      key-positions = <3 26>;
-      layers = <0>;
-    };
-
-    intra {
-      bindings = <&none>;
-      key-positions = <11 13 18>;
-      layers = <0>;
-    };
-
-    inter {
-      bindings = <&mc_inter>;
-      key-positions = <11 13 17>;
+      key-positions = <21 13>;
       layers = <0>;
     };
 
@@ -288,7 +234,7 @@
 
     micro {
       bindings = <&mc_micro>;
-      key-positions = <15 11>;
+      key-positions = <15 11 19>;
       layers = <0>;
     };
 
@@ -306,7 +252,7 @@
 
     over {
       bindings = <&mc_over>;
-      key-positions = <11 24>;
+      key-positions = <24 19>;
       layers = <0>;
     };
 
@@ -318,7 +264,7 @@
 
     retro {
       bindings = <&mc_retro>;
-      key-positions = <11 13 19>;
+      key-positions = <11 19>;
       layers = <0>;
     };
 
@@ -331,12 +277,6 @@
     kilo {
       bindings = <&mc_kilo>;
       key-positions = <25 19>;
-      layers = <0>;
-    };
-
-    semi {
-      bindings = <&mc_semi>;
-      key-positions = <12 18>;
       layers = <0>;
     };
 
@@ -384,19 +324,19 @@
 
     ward {
       bindings = <&mc_ward>;
-      key-positions = <1 11>;
+      key-positions = <1 23>;
       layers = <0>;
     };
 
     ation {
       bindings = <&mc_ation>;
-      key-positions = <10 16 13>;
+      key-positions = <10 18 19>;
       layers = <0>;
     };
 
     tion {
       bindings = <&mc_tion>;
-      key-positions = <13 16>;
+      key-positions = <18 19>;
       layers = <0>;
     };
 
@@ -475,6 +415,12 @@
     with {
       bindings = <&mc_with>;
       key-positions = <1 18>;
+      layers = <0>;
+    };
+
+    layout {
+      bindings = <&mc_layout>;
+      key-positions = <6 8>;
       layers = <0>;
     };
   };
@@ -585,27 +531,6 @@
       label = "MC_VERSION";
     };
 
-    mc_anti: mc_anti {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp A &kp N &kp T &kp I>;
-      label = "MC_ANTI";
-    };
-
-    mc_auto: mc_auto {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp A &kp U &kp T &kp O>;
-      label = "MC_AUTO";
-    };
-
-    mc_circum: mc_circum {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp C &kp I &kp R &kp C &kp U &kp M>;
-      label = "MC_CIRCUM";
-    };
-
     mc_counter: mc_counter {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
@@ -613,60 +538,11 @@
       label = "MC_COUNTER";
     };
 
-    mc_contra: mc_contra {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp C &kp O &kp N &kp T &kp R &kp A>;
-      label = "MC_CONTRA";
-    };
-
-    mc_equi: mc_equi {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp E &kp Q &kp U &kp I>;
-      label = "MC_EQUI";
-    };
-
     mc_extra: mc_extra {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings = <&kp E &kp X &kp T &kp R &kp A>;
       label = "MC_EXTRA";
-    };
-
-    mc_hetero: mc_hetero {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp H &kp E &kp T &kp E &kp R &kp O>;
-      label = "MC_HETERO";
-    };
-
-    mc_homo: mc_homo {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp H &kp O &kp M &kp O>;
-      label = "MC_HOMO";
-    };
-
-    mc_hyper: mc_hyper {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp H &kp Y &kp P &kp E &kp R>;
-      label = "MC_HYPER";
-    };
-
-    mc_intra: mc_intra {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp I &kp N &kp T &kp R &kp A>;
-      label = "MC_INTRA";
-    };
-
-    mc_inter: mc_inter {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp I &kp N &kp T &kp E &kp R>;
-      label = "MC_INTER";
     };
 
     mc_magn: mc_magn {
@@ -681,13 +557,6 @@
       #binding-cells = <0>;
       bindings = <&kp M &kp I &kp C &kp R &kp O>;
       label = "MC_MICRO";
-    };
-
-    mc_mono: mc_mono {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp M &kp O &kp N &kp O>;
-      label = "MC_MONO";
     };
 
     mc_multi: mc_multi {
@@ -730,13 +599,6 @@
       #binding-cells = <0>;
       bindings = <&kp K &kp I &kp L &kp O>;
       label = "MC_KILO";
-    };
-
-    mc_semi: mc_semi {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp S &kp E &kp M &kp I>;
-      label = "MC_SEMI";
     };
 
     mc_able: mc_able {
@@ -898,6 +760,13 @@
       #binding-cells = <0>;
       bindings = <&kp W &kp I &kp T &kp H>;
       label = "MC_WITH";
+    };
+
+    mc_auto: mc_auto {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp A &kp U &kp T &kp O>;
+      label = "MC_AUTO";
     };
   };
 

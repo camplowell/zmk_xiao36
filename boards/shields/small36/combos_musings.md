@@ -11,16 +11,6 @@ scti -> static
 fnu -> uniform
 tly -> layout
 
-### Special variables
-sth -> this
-fsl -> self
-
-### Types
-scl -> class
-ftl -> float
-blo -> bool
-dv -> void
-ln -> null
 
 ### Control flow
 ws -> switch
@@ -38,7 +28,6 @@ wrt -> throw
 rs -> raise
 
 ## Other actions
-tdl -> delete
 ast -> assert
 pt -> print
 ptl -> println
@@ -56,7 +45,7 @@ cte -> counter
 act -> contra
 qi -> equi
 rxt -> extra
-the -> hetero
+rho -> hetero
 mo -> homo
 ph -> hyper
 rti -> intra
@@ -89,7 +78,6 @@ tm -> ment
 
 ## Words
 ab -> about
-at -> @
 vh -> have
 io -> tion
 dl -> would
