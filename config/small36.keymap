@@ -768,6 +768,13 @@
       bindings = <&kp A &kp U &kp T &kp O>;
       label = "MC_AUTO";
     };
+
+    mc_mono: mc_mono {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp M &kp O &kp N &kp O>;
+      label = "MC_MONO";
+    };
   };
 
   keymap {
