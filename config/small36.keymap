@@ -25,7 +25,7 @@
       compatible = "zmk,behavior-tap-dance";
       label = "MULTI_SFT";
       #binding-cells = <0>;
-      bindings = <&tap_sticky<LSHFT, LSHFT>>, <&caps_word>;
+      bindings = <&tap_sticky LSHFT LSHFT>, <&caps_word>;
     };
 
     un_sp: un_sp {
