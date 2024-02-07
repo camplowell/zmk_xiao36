@@ -25,7 +25,7 @@
       compatible = "zmk,behavior-tap-dance";
       label = "MULTI_SFT";
       #binding-cells = <0>;
-      bindings = <&tap_sticky LSHFT LSHFT>, <&caps_word>;
+      bindings = <&sk LSHFT>, <&caps_word>;
     };
 
     un_sp: un_sp {
@@ -896,7 +896,7 @@
         &kp Q  &kp W  &kp F  &kp P       &kp B        &kp J      &kp L     &kp U     &kp Y    &kp SQT
         &kp A  &kp R  &kp S  &kp T       &kp G        &kp M      &kp N     &kp E     &kp I    &kp O
         &kp Z  &kp X  &kp C  &kp D       &kp V        &kp K      &kp H     &cm_excl  &dot_qm  &kp SEMI
-                      &sl 4  &multi_sft  &key_repeat  &kp ENTER  &dyn_spc  &sl 5
+                      &sl 4  &sk LSHFT   &key_repeat  &kp ENTER  &dyn_spc  &sl 5
       >;
     };
 
@@ -905,7 +905,7 @@
         &kp Q  &kp W  &kp E  &kp R       &kp T        &kp Y      &kp U     &kp I     &kp O    &kp P
         &kp A  &kp S  &kp D  &kp F       &kp G        &kp H      &kp J     &kp K     &kp L    &kp SQT
         &kp Z  &kp X  &kp C  &kp V       &kp B        &kp N      &kp M     &cm_excl  &dot_qm  &kp SEMICOLON
-                      &sl 4  &multi_sft  &key_repeat  &kp ENTER  &dyn_spc  &sl 5
+                      &sl 4  &kp LSHFT   &key_repeat  &kp ENTER  &dyn_spc  &sl 5
       >;
     };
 
