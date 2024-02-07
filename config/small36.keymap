@@ -6,15 +6,26 @@
 // dt-formatter: multilineIntegerCellsIndent = "reindent"
 // dt-formatter: multilineListCommaStyle = "leading"
 
-&sk { quick-release; };
+&sk { 
+  quick-release; 
+  release-after-ms=<1000>;
+};
 
 / {
   behaviors {
+    tap_sticky: tap_sticky {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <200>;
+      bindings = <&sk>, <&kp>;
+    };
+
     multi_sft: multi_sft {
       compatible = "zmk,behavior-tap-dance";
       label = "MULTI_SFT";
       #binding-cells = <0>;
-      bindings = <&sk LSHFT>, <&caps_word>;
+      bindings = <&tap_sticky<LSHFT, LSHFT>, <&caps_word>;
     };
 
     un_sp: un_sp {
@@ -31,7 +42,6 @@
 
       #binding-cells = <0>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
-      keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
     };
 
     dot_qm: dot_qm {
@@ -129,300 +139,400 @@
       bindings = <&mc_public>;
       key-positions = <3 4>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     private {
       bindings = <&mc_private>;
       key-positions = <3 11>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     protected {
       bindings = <&mc_protected>;
       key-positions = <3 19>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     continue {
       bindings = <&mc_continue>;
       key-positions = <22 7>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     break {
       bindings = <&mc_break>;
       key-positions = <4 25>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     return {
       bindings = <&mc_return>;
       key-positions = <11 13>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     throw {
       bindings = <&mc_throw>;
       key-positions = <1 13 11>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     raise {
       bindings = <&mc_raise>;
       key-positions = <11 12 18>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     assert {
       bindings = <&mc_assert>;
       key-positions = <10 12 13>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     print {
       bindings = <&mc_print>;
       key-positions = <3 13>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     println {
       bindings = <&mc_println>;
       key-positions = <3 13 6>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     stdout {
       bindings = <&mc_stdout>;
       key-positions = <13 12 19>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     gl_pragma {
       bindings = <&mc_glsl_pragma>;
       key-positions = <3 14>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     version {
       bindings = <&mc_version>;
       key-positions = <24 12>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     auto {
       bindings = <&mc_auto>;
       key-positions = <10 7>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     counter {
       bindings = <&mc_counter>;
       key-positions = <22 13>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     extra {
       bindings = <&mc_extra>;
       key-positions = <21 13>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     magn {
       bindings = <&mc_magn>;
       key-positions = <15 16>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     micro {
       bindings = <&mc_micro>;
       key-positions = <15 11 19>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     mono {
       bindings = <&mc_mono>;
       key-positions = <15 16 19>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     multi {
       bindings = <&mc_multi>;
       key-positions = <15 6>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     over {
       bindings = <&mc_over>;
       key-positions = <24 19>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     pseudo {
       bindings = <&mc_pseudo>;
       key-positions = <3 7 17>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     retro {
       bindings = <&mc_retro>;
       key-positions = <11 19>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     milli {
       bindings = <&mc_milli>;
       key-positions = <15 18>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     kilo {
       bindings = <&mc_kilo>;
       key-positions = <25 19>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     able {
       bindings = <&mc_able>;
       key-positions = <4 6>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     ance {
       bindings = <&mc_ance>;
       key-positions = <16 22 10>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     ence {
       bindings = <&mc_ence>;
       key-positions = <22 16 17>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     ible {
       bindings = <&mc_ible>;
       key-positions = <4 6 18>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     ious {
       bindings = <&mc_ious>;
       key-positions = <12 7>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     less {
       bindings = <&mc_less>;
       key-positions = <12 6>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     some {
       bindings = <&mc_some>;
       key-positions = <12 15>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     ward {
       bindings = <&mc_ward>;
       key-positions = <1 23>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     ation {
       bindings = <&mc_ation>;
       key-positions = <10 18 19>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     tion {
       bindings = <&mc_tion>;
       key-positions = <18 19>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     tude {
       bindings = <&mc_tude>;
       key-positions = <13 23>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     cause {
       bindings = <&mc_cause>;
       key-positions = <22 12>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     ment {
       bindings = <&mc_ment>;
       key-positions = <15 13>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     about {
       bindings = <&about>;
       key-positions = <10 4>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     have {
       bindings = <&mc_have>;
       key-positions = <24 26>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     ould {
       bindings = <&mc_ould>;
       key-positions = <6 23>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     make {
       bindings = <&mc_make>;
       key-positions = <15 25>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     until {
       bindings = <&mc_until>;
       key-positions = <6 13>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     youre {
       bindings = <&mc_youre>;
       key-positions = <8 11>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     your {
       bindings = <&mc_your>;
       key-positions = <7 11>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     what {
       bindings = <&mc_what>;
       key-positions = <1 10>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     which {
       bindings = <&mc_which>;
       key-positions = <22 26>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     with {
       bindings = <&mc_with>;
       key-positions = <1 18>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
 
     layout {
       bindings = <&mc_layout>;
       key-positions = <6 8>;
       layers = <0>;
+      require-prior-idle-ms = 30;
+      slow-release = true;
     };
   };
 
@@ -819,8 +929,8 @@
 
     NAV {
       bindings = <
-        &kp ESC    &kp HOME   &kp UP        &kp END    &tog 2     &trans       &kp AT     &kp HASH  &trans    &trans
-        &sk LSHFT  &kp LEFT   &kp DOWN      &kp RIGHT  &kp TAB    &trans       &par       &bkt      &brc      &tbkt
+        &kp ESC    &kp HOME   &kp UP        &kp END    &tog 2     &none        &kp AT     &kp HASH  &none     &none
+        &sk LSHFT  &kp LEFT   &kp DOWN      &kp RIGHT  &kp TAB    &none        &par       &bkt      &brc      &tbkt
         &sk LSHFT  &sk LCTRL  &sk LEFT_ALT  &sk LGUI   &kp ENTER  &kp CARET    &vkp_eq    &kp EXCL  &kp AMPS  &kp PIPE
                               &trans        &kp SPACE  &kp ENTER  &key_repeat  &kp UNDER  &trans
       >;
@@ -828,9 +938,9 @@
 
     NUM {
       bindings = <
-        &kp GRAVE      &kp PRCNT  &kp DLLR   &kp LPAR  &kp RPAR   &trans  &kp N7  &kp N8  &kp N9  &bk_del
-        &kp LS(CARET)  &kp STAR   &kp PLUS   &vkp_eq   &trans     &trans  &kp N4  &kp N5  &kp N6  &kp N0
-        &trans         &kp FSLH   &kp MINUS  &kp DOT   &kp COMMA  &trans  &kp N1  &kp N2  &kp N3  &kp N0
+        &kp GRAVE      &kp PRCNT  &kp DLLR   &kp LPAR  &kp RPAR   &none  &kp N7  &kp N8  &kp N9  &bk_del
+        &kp LS(CARET)  &kp STAR   &kp PLUS   &vkp_eq   &none      &none  &kp N4  &kp N5  &kp N6  &kp N0
+        &none          &kp FSLH   &kp MINUS  &kp DOT   &kp COMMA  &none  &kp N1  &kp N2  &kp N3  &kp N0
                                   &trans     &trans    &trans     &trans  &trans  &trans
       >;
     };
@@ -838,8 +948,8 @@
     EXTRA {
       bindings = <
         &kp TILDE  &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PG_UP  &bt BT_CLR    &none      &kp F7  &kp F8  &kp F9  &kp F10
-        &trans     &kp INS          &kp KP_NUMLOCK  &kp PG_DN  &bt BT_SEL 0  &base_sel  &kp F4  &kp F5  &kp F6  &kp F11
-        &trans     &kp BSLH         &trans          &trans     &bt BT_SEL 1  &none      &kp F1  &kp F2  &kp F3  &kp F12
+        &sk LSHFT  &kp INS          &kp KP_NUMLOCK  &kp PG_DN  &bt BT_SEL 0  &base_sel  &kp F4  &kp F5  &kp F6  &kp F11
+        &sk LSHFT  &kp BSLH         &none           &none      &bt BT_SEL 1  &none      &kp F1  &kp F2  &kp F3  &kp F12
                                     &trans          &trans     &trans        &trans     &trans  &trans
       >;
     };
