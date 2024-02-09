@@ -6,9 +6,9 @@
 // dt-formatter: multilineIntegerCellsIndent = "reindent"
 // dt-formatter: multilineListCommaStyle = "leading"
 
-&sk { 
-  quick-release; 
-  release-after-ms=<1000>;
+&sk {
+  quick-release;
+  release-after-ms = <1000>;
 };
 
 / {
@@ -18,7 +18,7 @@
       #binding-cells = <2>;
       flavor = "tap-preferred";
       tapping-term-ms = <200>;
-      bindings = <&sk>, <&kp>;
+      bindings = <&kp>, <&sk>;
     };
 
     multi_sft: multi_sft {
@@ -893,63 +893,63 @@
 
     COLEMAK {
       bindings = <
-        &kp Q  &kp W  &kp F  &kp P       &kp B        &kp J      &kp L     &kp U     &kp Y    &kp SQT
-        &kp A  &kp R  &kp S  &kp T       &kp G        &kp M      &kp N     &kp E     &kp I    &kp O
-        &kp Z  &kp X  &kp C  &kp D       &kp V        &kp K      &kp H     &cm_excl  &dot_qm  &kp SEMI
-                      &sl 4  &sk LSHFT   &key_repeat  &kp ENTER  &dyn_spc  &sl 5
+        &kp Q  &kp W  &kp F  &kp P                    &kp B        &kp J      &kp L     &kp U     &kp Y    &kp SQT
+        &kp A  &kp R  &kp S  &kp T                    &kp G        &kp M      &kp N     &kp E     &kp I    &kp O
+        &kp Z  &kp X  &kp C  &kp D                    &kp V        &kp K      &kp H     &cm_excl  &dot_qm  &kp SEMI
+                      &sl 4  &tap_sticky LSHFT LSHFT  &key_repeat  &kp ENTER  &dyn_spc  &sl 5
       >;
     };
 
     QWERTY {
       bindings = <
-        &kp Q  &kp W  &kp E  &kp R       &kp T        &kp Y      &kp U     &kp I     &kp O    &kp P
-        &kp A  &kp S  &kp D  &kp F       &kp G        &kp H      &kp J     &kp K     &kp L    &kp SQT
-        &kp Z  &kp X  &kp C  &kp V       &kp B        &kp N      &kp M     &cm_excl  &dot_qm  &kp SEMICOLON
-                      &sl 4  &kp LSHFT   &key_repeat  &kp ENTER  &dyn_spc  &sl 5
+        &kp Q  &kp W  &kp E  &kp R      &kp T        &kp Y      &kp U     &kp I     &kp O    &kp P
+        &kp A  &kp S  &kp D  &kp F      &kp G        &kp H      &kp J     &kp K     &kp L    &kp SQT
+        &kp Z  &kp X  &kp C  &kp V      &kp B        &kp N      &kp M     &cm_excl  &dot_qm  &kp SEMICOLON
+                      &sl 4  &kp LSHFT  &key_repeat  &kp ENTER  &dyn_spc  &sl 5
       >;
     };
 
     GAMING {
       bindings = <
-        &kp TAB     &kp Q  &kp X  &kp E      &kp R  &none   &none  &none  &none  &none
-        &kp LSHIFT  &kp A  &kp W  &kp D      &kp F  &none   &none  &none  &none  &none
-        &kp LCTRL   &kp Z  &kp S  &kp C      &kp G  &none   &none  &none  &none  &none
+        &kp TAB     &kp Q  &kp W  &kp E      &kp R  &none   &none  &none  &none  &none
+        &kp LSHIFT  &kp A  &kp S  &kp D      &kp F  &none   &none  &none  &none  &none
+        &kp LCTRL   &kp Z  &kp X  &kp C      &kp G  &kp K   &none  &none  &none  &none
                            &sl 3  &kp SPACE  &kp V  &tog 2  &none  &none
       >;
     };
 
     GM_NUM {
       bindings = <
-        &kp ESC  &kp N7  &kp N8  &kp N9  &tog 2  &trans  &trans  &trans  &trans  &trans
-        &kp N0   &kp N4  &kp N5  &kp N6  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans   &kp N1  &kp N2  &kp N3  &trans  &trans  &trans  &trans  &trans  &trans
+        &kp ESC  &kp N7  &kp N8  &kp N9  &tog 2  &none   &none   &none   &none  &none
+        &kp N0   &kp N4  &kp N5  &kp N6  &none   &none   &none   &none   &none  &none
+        &kp N0   &kp N1  &kp N2  &kp N3  &none   &none   &none   &none   &none  &none
                          &trans  &trans  &trans  &trans  &trans  &trans
       >;
     };
 
     NAV {
       bindings = <
-        &kp ESC    &kp HOME   &kp UP        &kp END    &tog 2     &none        &kp AT     &kp HASH  &none     &none
-        &sk LSHFT  &kp LEFT   &kp DOWN      &kp RIGHT  &kp TAB    &none        &par       &bkt      &brc      &tbkt
-        &sk LSHFT  &sk LCTRL  &sk LEFT_ALT  &sk LGUI   &kp ENTER  &kp CARET    &vkp_eq    &kp EXCL  &kp AMPS  &kp PIPE
+        &kp ESC    &kp HOME   &kp UP        &kp END    &tog 2     &kp AT       &kp HASH   &kp DOLLAR  &kp PERCENT  &none
+        &kp LSHFT  &kp LEFT   &kp DOWN      &kp RIGHT  &kp TAB    &none        &par       &bkt        &brc         &tbkt
+        &sk LSHFT  &sk LCTRL  &sk LEFT_ALT  &sk LGUI   &kp ENTER  &kp CARET    &vkp_eq    &kp EXCL    &kp AMPS     &kp PIPE
                               &trans        &kp SPACE  &kp ENTER  &key_repeat  &kp UNDER  &trans
       >;
     };
 
     NUM {
       bindings = <
-        &kp GRAVE      &kp PRCNT  &kp DLLR   &kp LPAR  &kp RPAR   &none  &kp N7  &kp N8  &kp N9  &bk_del
-        &kp LS(CARET)  &kp STAR   &kp PLUS   &vkp_eq   &none      &none  &kp N4  &kp N5  &kp N6  &kp N0
-        &none          &kp FSLH   &kp MINUS  &kp DOT   &kp COMMA  &none  &kp N1  &kp N2  &kp N3  &kp N0
+        &kp GRAVE      &kp PRCNT  &kp DLLR   &kp LPAR  &kp RPAR   &none   &kp N7  &kp N8  &kp N9  &kp BACKSPACE
+        &kp LS(CARET)  &kp STAR   &kp PLUS   &vkp_eq   &none      &none   &kp N4  &kp N5  &kp N6  &kp N0
+        &none          &kp FSLH   &kp MINUS  &kp DOT   &kp COMMA  &none   &kp N1  &kp N2  &kp N3  &kp N0
                                   &trans     &trans    &trans     &trans  &trans  &trans
       >;
     };
 
     EXTRA {
       bindings = <
-        &kp TILDE  &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PG_UP  &bt BT_CLR    &none      &kp F7  &kp F8  &kp F9  &kp F10
-        &sk LSHFT  &kp INS          &kp KP_NUMLOCK  &kp PG_DN  &bt BT_SEL 0  &base_sel  &kp F4  &kp F5  &kp F6  &kp F11
-        &sk LSHFT  &kp BSLH         &none           &none      &bt BT_SEL 1  &none      &kp F1  &kp F2  &kp F3  &kp F12
+        &kp TILDE  &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PG_UP  &bt BT_CLR    &none      &kp F7  &kp F8  &kp F9  &kp DEL
+        &sk LSHFT  &kp INS          &kp KP_NUMLOCK  &kp PG_DN  &bt BT_SEL 0  &base_sel  &kp F4  &kp F5  &kp F6  &kp F10
+        &sk LSHFT  &kp BSLH         &none           &none      &bt BT_SEL 1  &kp F12    &kp F1  &kp F2  &kp F3  &kp F11
                                     &trans          &trans     &trans        &trans     &trans  &trans
       >;
     };
