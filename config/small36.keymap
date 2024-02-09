@@ -407,17 +407,9 @@
       slow-release;
     };
 
-    ation {
-      bindings = <&mc_ation>;
-      key-positions = <10 18 19>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
     tion {
       bindings = <&mc_tion>;
-      key-positions = <18 19>;
+      key-positions = <16 13>;
       layers = <0>;
       require-prior-idle-ms = <30>;
       slow-release;
@@ -766,13 +758,6 @@
       #binding-cells = <0>;
       bindings = <&kp W &kp A &kp R &kp D>;
       label = "MC_WARD";
-    };
-
-    mc_ation: mc_ation {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp A &kp T &kp I &kp O &kp N>;
-      label = "MC_ATION";
     };
 
     mc_tude: mc_tude {
