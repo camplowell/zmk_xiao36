@@ -28,17 +28,10 @@
       bindings = <&sk LSHFT>, <&caps_word>;
     };
 
-    un_sp: un_sp {
-      compatible = "zmk,behavior-tap-dance";
-      label = "UN_SP";
-      #binding-cells = <0>;
-      bindings = <&kp UNDER>, <&kp SPACE>;
-    };
-
     dyn_spc: dyn_spc {
       compatible = "zmk,behavior-mod-morph";
       label = "DYN_SPC";
-      bindings = <&kp SPACE>, <&un_sp>;
+      bindings = <&kp SPACE>, <&hold_morph SPACE UNDERSCORE>;
 
       #binding-cells = <0>;
       mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -129,6 +122,26 @@
       label = "BASE_SEL";
       #binding-cells = <0>;
       bindings = <&to 0>, <&to 1>, <&to 2>;
+    };
+
+    smart_layer: smart_layer {
+      compatible = "zmk,behavior-hold-tap";
+      label = "SMART_LAYER";
+      bindings = <&mo>, <&sl>;
+
+      #binding-cells = <2>;
+      tapping-term-ms = <200>;
+    };
+
+    hold_morph: hold_morph {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOLD_MORPH";
+      bindings = <&kp>, <&kp>;
+
+      #binding-cells = <2>;
+      tapping-term-ms = <200>;
+      quick-tap-ms = <200>;
+      flavor = "tap-preferred";
     };
   };
 
@@ -321,7 +334,7 @@
 
     retro {
       bindings = <&mc_retro>;
-      key-positions = <11 19>;
+      key-positions = <11 19 13>;
       layers = <0>;
       require-prior-idle-ms = <30>;
       slow-release;
@@ -878,10 +891,10 @@
 
     COLEMAK {
       bindings = <
-        &kp Q  &kp W  &kp F  &kp P                    &kp B        &kp J      &kp L     &kp U     &kp Y    &kp SQT
-        &kp A  &kp R  &kp S  &kp T                    &kp G        &kp M      &kp N     &kp E     &kp I    &kp O
-        &kp Z  &kp X  &kp C  &kp D                    &kp V        &kp K      &kp H     &cm_excl  &dot_qm  &kp SEMI
-                      &sl 4  &tap_sticky LSHFT LSHFT  &key_repeat  &kp ENTER  &dyn_spc  &sl 5
+        &kp Q  &kp W  &kp F             &kp P                    &kp B        &kp J      &kp L     &kp U             &kp Y    &kp SQT
+        &kp A  &kp R  &kp S             &kp T                    &kp G        &kp M      &kp N     &kp E             &kp I    &kp O
+        &kp Z  &kp X  &kp C             &kp D                    &kp V        &kp K      &kp H     &cm_excl          &dot_qm  &kp SEMI
+                      &smart_layer 4 4  &tap_sticky LSHFT LSHFT  &key_repeat  &kp ENTER  &dyn_spc  &smart_layer 5 5
       >;
     };
 
@@ -896,16 +909,16 @@
 
     GAMING {
       bindings = <
-        &kp TAB     &kp Q  &kp W  &kp E      &kp R  &none   &none  &none  &none  &none
-        &kp LSHIFT  &kp A  &kp S  &kp D      &kp F  &none   &none  &none  &none  &none
-        &kp LCTRL   &kp Z  &kp X  &kp C      &kp G  &kp K   &none  &none  &none  &none
-                           &sl 3  &kp SPACE  &kp V  &tog 2  &none  &none
+        &kp TAB     &kp Q  &kp W  &kp E      &kp R  &none  &none  &none   &none  &none
+        &kp LSHIFT  &kp A  &kp S  &kp D      &kp F  &none  &none  &none   &none  &none
+        &kp LCTRL   &kp Z  &kp X  &kp C      &kp G  &kp K  &none  &none   &none  &none
+                           &mo 3  &kp SPACE  &kp V  &none  &none  &tog 2
       >;
     };
 
     GM_NUM {
       bindings = <
-        &kp ESC  &kp N7  &kp N8  &kp N9  &tog 2  &none   &none   &none   &none  &none
+        &kp ESC  &kp N7  &kp N8  &kp N9  &none   &none   &none   &none   &none  &none
         &kp N0   &kp N4  &kp N5  &kp N6  &none   &none   &none   &none   &none  &none
         &kp N0   &kp N1  &kp N2  &kp N3  &none   &none   &none   &none   &none  &none
                          &trans  &trans  &trans  &trans  &trans  &trans
@@ -914,26 +927,26 @@
 
     NAV {
       bindings = <
-        &kp ESC    &kp HOME   &kp UP        &kp END    &tog 2     &kp AT       &kp HASH   &kp DOLLAR  &kp PERCENT  &none
-        &kp LSHFT  &kp LEFT   &kp DOWN      &kp RIGHT  &kp TAB    &none        &par       &bkt        &brc         &tbkt
-        &sk LSHFT  &sk LCTRL  &sk LEFT_ALT  &sk LGUI   &kp ENTER  &kp CARET    &vkp_eq    &kp EXCL    &kp AMPS     &kp PIPE
-                              &trans        &kp SPACE  &kp ENTER  &key_repeat  &kp UNDER  &trans
+        &kp ESC                  &kp HOME                 &kp UP                 &kp END                &none      &kp AT       &kp HASH   &kp DOLLAR  &kp PERCENT  &none
+        &kp LSHFT                &kp LEFT                 &kp DOWN               &kp RIGHT              &kp TAB    &none        &par       &bkt        &brc         &tbkt
+        &tap_sticky LSHFT LSHFT  &tap_sticky LCTRL LCTRL  &tap_sticky LALT LALT  &tap_sticky LGUI LGUI  &kp ENTER  &kp CARET    &vkp_eq    &kp EXCL    &kp AMPS     &kp PIPE
+                                                          &trans                 &kp SPACE              &kp ENTER  &key_repeat  &kp UNDER  &trans
       >;
     };
 
     NUM {
       bindings = <
-        &kp GRAVE      &kp PRCNT  &kp DLLR   &kp LPAR  &kp RPAR   &none   &kp N7  &kp N8  &kp N9  &kp BACKSPACE
-        &kp LS(CARET)  &kp STAR   &kp PLUS   &vkp_eq   &none      &none   &kp N4  &kp N5  &kp N6  &kp N0
-        &none          &kp FSLH   &kp MINUS  &kp DOT   &kp COMMA  &none   &kp N1  &kp N2  &kp N3  &kp N0
-                                  &trans     &trans    &trans     &trans  &trans  &trans
+        &kp GRAVE      &kp PRCNT  &kp DLLR   &kp LPAR   &kp RPAR   &none   &kp N7  &kp N8  &kp N9  &kp BACKSPACE
+        &kp LS(CARET)  &kp STAR   &kp PLUS   &vkp_eq    &none      &none   &kp N4  &kp N5  &kp N6  &kp N0
+        &none          &kp FSLH   &kp MINUS  &kp DOT    &kp COMMA  &none   &kp N1  &kp N2  &kp N3  &kp N0
+                                  &trans     &kp SPACE  &trans     &trans  &trans  &trans
       >;
     };
 
     EXTRA {
       bindings = <
-        &kp TILDE  &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PG_UP  &bt BT_CLR    &none      &kp F7  &kp F8  &kp F9  &kp DEL
-        &sk LSHFT  &kp INS          &kp KP_NUMLOCK  &kp PG_DN  &bt BT_SEL 0  &base_sel  &kp F4  &kp F5  &kp F6  &kp F10
+        &kp TILDE  &kp INS          &kp SCROLLLOCK  &kp PG_UP  &bt BT_CLR    &none      &kp F7  &kp F8  &kp F9  &kp DEL
+        &sk LSHFT  &kp PRINTSCREEN  &kp KP_NUMLOCK  &kp PG_DN  &bt BT_SEL 0  &base_sel  &kp F4  &kp F5  &kp F6  &kp F10
         &sk LSHFT  &kp BSLH         &none           &none      &bt BT_SEL 1  &kp F12    &kp F1  &kp F2  &kp F3  &kp F11
                                     &trans          &trans     &trans        &trans     &trans  &trans
       >;
