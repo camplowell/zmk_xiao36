@@ -149,8 +149,7 @@
     bt_reluctant: bt_reluctant {
       compatible = "zmk,behavior-hold-tap";
       label = "BT_RELUCTANT";
-      bindings = <&bt>, <&none>;
-
+      bindings = <&bt>;
       #binding-cells = <2>;
       flavor = "tap-preferred";
       tapping-term-ms = <500>;
