@@ -827,28 +827,28 @@
 
     COLEMAK {
       bindings = <
-        &kp Q  &kp W  &kp F             &kp P                    &kp B        &kp J      &kp L     &kp U             &kp Y    &kp SQT
-        &kp A  &kp R  &kp S             &kp T                    &kp G        &kp M      &kp N     &kp E             &kp I    &kp O
-        &kp Z  &kp X  &kp C             &kp D                    &kp V        &kp K      &kp H     &cm_excl          &dot_qm  &kp SEMI
-                      &smart_layer 4 4  &tap_sticky LSHFT LSHFT  &key_repeat  &kp ENTER  &dyn_spc  &smart_layer 5 5
+        &kp Q  &kp W  &kp F  &kp P                    &kp B        &kp J      &kp L     &kp U     &kp Y    &kp SQT
+        &kp A  &kp R  &kp S  &kp T                    &kp G        &kp M      &kp N     &kp E     &kp I    &kp O
+        &kp Z  &kp X  &kp C  &kp D                    &kp V        &kp K      &kp H     &cm_excl  &dot_qm  &kp SEMI
+                      &mo 4  &tap_sticky LSHFT LSHFT  &key_repeat  &kp ENTER  &dyn_spc  &mo 5
       >;
     };
 
     QWERTY {
       bindings = <
-        &kp Q  &kp W  &kp E             &kp R      &kp T        &kp Y      &kp U     &kp I             &kp O    &kp P
-        &kp A  &kp S  &kp D             &kp F      &kp G        &kp H      &kp J     &kp K             &kp L    &kp SQT
-        &kp Z  &kp X  &kp C             &kp V      &kp B        &kp N      &kp M     &cm_excl          &dot_qm  &kp SEMICOLON
-                      &smart_layer 4 4  &kp LSHFT  &key_repeat  &kp ENTER  &dyn_spc  &smart_layer 5 5
+        &kp Q  &kp W  &kp E  &kp R      &kp T        &kp Y      &kp U     &kp I     &kp O    &kp P
+        &kp A  &kp S  &kp D  &kp F      &kp G        &kp H      &kp J     &kp K     &kp L    &kp SQT
+        &kp Z  &kp X  &kp C  &kp V      &kp B        &kp N      &kp M     &cm_excl  &dot_qm  &kp SEMICOLON
+                      &mo 4  &kp LSHFT  &key_repeat  &kp ENTER  &dyn_spc  &mo 5
       >;
     };
 
     GAMING {
       bindings = <
-        &kp TAB     &kp Q  &kp W  &kp E      &kp R  &kp Y  &kp U  &kp I      &kp O    &kp P
-        &kp LSHIFT  &kp A  &kp S  &kp D      &kp F  &kp H  &kp J  &kp K      &kp L    &kp SEMICOLON
-        &kp LCTRL   &kp Z  &kp X  &kp C      &kp G  &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH
-                           &mo 3  &kp SPACE  &kp V  &none  &none  &tog 2
+        &kp TAB     &kp Q  &kp W  &kp E      &kp R      &kp Y  &kp U  &kp I      &kp O    &kp P
+        &kp LSHIFT  &kp A  &kp S  &kp D      &kp F      &kp H  &kp J  &kp K      &kp L    &kp SEMICOLON
+        &kp LCTRL   &kp Z  &kp X  &kp C      &kp V      &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH
+                           &mo 3  &kp SPACE  &kp ENTER  &none  &none  &tog 2
       >;
     };
 
