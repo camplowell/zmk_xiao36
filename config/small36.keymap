@@ -150,7 +150,7 @@
       compatible = "zmk,behavior-tap-dance";
       label = "BT_CLR3";
       #binding-cells = <0>;
-      bindings = <&none>, <&none>, <&bt BT_CLR>;
+      bindings = <&none>, <&bt BT_CLR>, <&bt BT_CLR_ALL>;
 
       tapping-term-ms = <200>;
     };
@@ -881,7 +881,7 @@
 
     EXTRA {
       bindings = <
-        &kp TILDE  &kp INS          &kp SCROLLLOCK  &kp PG_UP  &bt_clr3      &none      &kp F7  &kp F8  &kp F9  &kp DEL
+        &kp TILDE  &kp INS          &kp SCROLLLOCK  &kp PG_UP  &bt BT_CLR    &none      &kp F7  &kp F8  &kp F9  &kp DEL
         &sk LSHFT  &kp PRINTSCREEN  &kp KP_NUMLOCK  &kp PG_DN  &bt BT_SEL 0  &base_sel  &kp F4  &kp F5  &kp F6  &kp F10
         &sk LSHFT  &kp BSLH         &none           &none      &bt BT_SEL 1  &kp F12    &kp F1  &kp F2  &kp F3  &kp F11
                                     &trans          &trans     &trans        &trans     &trans  &trans
