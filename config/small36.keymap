@@ -167,57 +167,9 @@
       slow-release;
     };
 
-    private {
-      bindings = <&mc_private>;
-      key-positions = <3 11>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
     protected {
       bindings = <&mc_protected>;
-      key-positions = <3 19>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
-    continue {
-      bindings = <&mc_continue>;
-      key-positions = <22 7>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
-    return {
-      bindings = <&mc_return>;
-      key-positions = <11 13>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
-    assert {
-      bindings = <&mc_assert>;
-      key-positions = <10 12 13>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
-    print {
-      bindings = <&mc_print>;
-      key-positions = <3 13>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
-    println {
-      bindings = <&mc_println>;
-      key-positions = <3 13 6>;
+      key-positions = <3 19 13>;
       layers = <0>;
       require-prior-idle-ms = <30>;
       slow-release;
@@ -263,14 +215,6 @@
       slow-release;
     };
 
-    over {
-      bindings = <&mc_over>;
-      key-positions = <24 19>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
     pseudo {
       bindings = <&mc_pseudo>;
       key-positions = <3 7 17>;
@@ -282,78 +226,6 @@
     retro {
       bindings = <&mc_retro>;
       key-positions = <11 19 13>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
-    milli {
-      bindings = <&mc_milli>;
-      key-positions = <15 18>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
-    kilo {
-      bindings = <&mc_kilo>;
-      key-positions = <25 19>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
-    able {
-      bindings = <&mc_able>;
-      key-positions = <4 6>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
-    ance {
-      bindings = <&mc_ance>;
-      key-positions = <16 22 10>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
-    ence {
-      bindings = <&mc_ence>;
-      key-positions = <22 16 17>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
-    ible {
-      bindings = <&mc_ible>;
-      key-positions = <4 6 18>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
-    less {
-      bindings = <&mc_less>;
-      key-positions = <12 6>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
-    some {
-      bindings = <&mc_some>;
-      key-positions = <12 15>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
-    ward {
-      bindings = <&mc_ward>;
-      key-positions = <1 23>;
       layers = <0>;
       require-prior-idle-ms = <30>;
       slow-release;
@@ -423,22 +295,6 @@
       slow-release;
     };
 
-    youre {
-      bindings = <&mc_youre>;
-      key-positions = <8 11>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
-    your {
-      bindings = <&mc_your>;
-      key-positions = <7 11>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
     what {
       bindings = <&mc_what>;
       key-positions = <1 10>;
@@ -447,25 +303,9 @@
       slow-release;
     };
 
-    which {
-      bindings = <&mc_which>;
-      key-positions = <22 26>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
-    with {
-      bindings = <&mc_with>;
-      key-positions = <1 18>;
-      layers = <0>;
-      require-prior-idle-ms = <30>;
-      slow-release;
-    };
-
     layout {
       bindings = <&mc_layout>;
-      key-positions = <6 8>;
+      key-positions = <6 8 13>;
       layers = <0>;
       require-prior-idle-ms = <30>;
       slow-release;
@@ -485,13 +325,6 @@
       label = "MC_PUBLIC";
     };
 
-    mc_private: mc_private {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp P &kp R &kp I &kp V &kp A &kp T &kp E>;
-      label = "MC_PRIVATE";
-    };
-
     mc_protected: mc_protected {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
@@ -506,13 +339,6 @@
       label = "MC_LAYOUT";
     };
 
-    mc_continue: mc_continue {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp C &kp O &kp N &kp T &kp I &kp N &kp U &kp E>;
-      label = "MC_CONTINUE";
-    };
-
     mc_break: mc_break {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
@@ -520,67 +346,11 @@
       label = "MC_BREAK";
     };
 
-    mc_return: mc_return {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp R &kp E &kp T &kp U &kp R &kp N>;
-      label = "MC_RETURN";
-    };
-
-    mc_throw: mc_throw {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp T &kp H &kp R &kp O &kp W>;
-      label = "MC_THROW";
-    };
-
-    mc_raise: mc_raise {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp R &kp A &kp I &kp S &kp E>;
-      label = "MC_RAISE";
-    };
-
-    mc_assert: mc_assert {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp A &kp S &kp S &kp E &kp R &kp T>;
-      label = "MC_ASSERT";
-    };
-
-    mc_print: mc_print {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp P &kp R &kp I &kp N &kp T>;
-      label = "MC_PRINT";
-    };
-
-    mc_println: mc_println {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp P &kp R &kp I &kp N &kp T &kp L &kp N>;
-      label = "MC_PRINTLN";
-    };
-
-    mc_stdout: mc_stdout {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp S &kp T &kp D &kp COLON &kp COLON &kp C &kp O &kp U &kp T &kp SPACE &kp LT &kp LT &kp SPACE>;
-      label = "MC_STDOUT";
-    };
-
     mc_glsl_pragma: mc_glsl_pragma {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings = <&kp POUND &kp I &kp F &kp SPACE &kp EXCL &kp D &kp E &kp F &kp I &kp N &kp E &kp D &kp LPAR &kp LS(P) &kp LS(R) &kp LS(A) &kp LS(G) &kp LS(M) &kp LS(A) &kp RIGHT &kp RET &kp POUND &kp D &kp E &kp F &kp I &kp N &kp E &kp SPACE &kp LS(P) &kp LS(R) &kp LS(A) &kp LS(G) &kp LS(M) &kp LS(A) &kp ENTER &kp RET &kp RET &kp RET &kp RET &kp POUND &kp E &kp N &kp D &kp I &kp F &kp SPACE &kp FSLH &kp FSLH &kp SPACE &kp LS(E) &kp LS(O) &kp LS(F) &kp UP &kp UP &kp UP &kp UP &kp LS(LC(RIGHT)) &kp LG(D)>;
       label = "MC_GLSL_PRAGMA";
-    };
-
-    mc_version: mc_version {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp V &kp E &kp R &kp S &kp I &kp O &kp N>;
-      label = "MC_VERSION";
     };
 
     mc_counter: mc_counter {
@@ -604,25 +374,11 @@
       label = "MC_MAGN";
     };
 
-    mc_micro: mc_micro {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp M &kp I &kp C &kp R &kp O>;
-      label = "MC_MICRO";
-    };
-
     mc_multi: mc_multi {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings = <&kp M &kp U &kp L &kp T &kp I>;
       label = "MC_MULTI";
-    };
-
-    mc_over: mc_over {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp O &kp V &kp E &kp R>;
-      label = "MC_OVER";
     };
 
     mc_pseudo: mc_pseudo {
@@ -637,76 +393,6 @@
       #binding-cells = <0>;
       bindings = <&kp R &kp E &kp T &kp R &kp O>;
       label = "MC_RETRO";
-    };
-
-    mc_milli: mc_milli {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp M &kp I &kp L &kp L &kp I>;
-      label = "MC_MILLI";
-    };
-
-    mc_kilo: mc_kilo {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp K &kp I &kp L &kp O>;
-      label = "MC_KILO";
-    };
-
-    mc_able: mc_able {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp A &kp B &kp L &kp E>;
-      label = "MC_ABLE";
-    };
-
-    mc_ance: mc_ance {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp A &kp N &kp C &kp E>;
-      label = "MC_ANCE";
-    };
-
-    mc_ence: mc_ence {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp E &kp N &kp C &kp E>;
-      label = "MC_ENCE";
-    };
-
-    mc_ible: mc_ible {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp I &kp B &kp L &kp E>;
-      label = "MC_IBLE";
-    };
-
-    mc_ious: mc_ious {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp I &kp O &kp U &kp S>;
-      label = "MC_IOUS";
-    };
-
-    mc_less: mc_less {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp L &kp E &kp S &kp S>;
-      label = "MC_LESS";
-    };
-
-    mc_some: mc_some {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp S &kp O &kp M &kp E>;
-      label = "MC_SOME";
-    };
-
-    mc_ward: mc_ward {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp W &kp A &kp R &kp D>;
-      label = "MC_WARD";
     };
 
     mc_tude: mc_tude {
@@ -765,60 +451,11 @@
       label = "MC_MAKE";
     };
 
-    mc_until: mc_until {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp U &kp N &kp T &kp I &kp L>;
-      label = "MC_UNTIL";
-    };
-
-    mc_youre: mc_youre {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp Y &kp O &kp U &kp SQT &kp R &kp E>;
-      label = "MC_YOURE";
-    };
-
-    mc_your: mc_your {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp Y &kp O &kp U &kp R>;
-      label = "MC_YOUR";
-    };
-
     mc_what: mc_what {
       compatible = "zmk,behavior-macro";
       #binding-cells = <0>;
       bindings = <&kp W &kp H &kp A &kp T>;
       label = "MC_WHAT";
-    };
-
-    mc_which: mc_which {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp W &kp H &kp I &kp C &kp H>;
-      label = "MC_WHICH";
-    };
-
-    mc_with: mc_with {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp W &kp I &kp T &kp H>;
-      label = "MC_WITH";
-    };
-
-    mc_auto: mc_auto {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp A &kp U &kp T &kp O>;
-      label = "MC_AUTO";
-    };
-
-    mc_mono: mc_mono {
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings = <&kp M &kp O &kp N &kp O>;
-      label = "MC_MONO";
     };
   };
 
@@ -848,16 +485,16 @@
         &kp TAB     &kp Q  &kp W  &kp E      &kp R      &kp Y  &kp U  &kp I      &kp O    &kp P
         &kp LSHIFT  &kp A  &kp S  &kp D      &kp F      &kp H  &kp J  &kp K      &kp L    &kp SEMICOLON
         &kp LCTRL   &kp Z  &kp X  &kp C      &kp V      &kp N  &kp M  &kp COMMA  &kp DOT  &kp SLASH
-                           &mo 3  &kp SPACE  &kp ENTER  &none  &none  &tog 2
+                           &mo 3  &kp SPACE  &kp ENTER  &none  &none  &none
       >;
     };
 
     GM_NUM {
       bindings = <
-        &kp ESC  &kp N7  &kp N8  &kp N9  &kp T   &none   &none   &none   &none  &none
-        &kp N0   &kp N4  &kp N5  &kp N6  &kp G   &none   &none   &none   &none  &none
-        &kp N0   &kp N1  &kp N2  &kp N3  &kp B   &none   &none   &none   &none  &none
-                         &trans  &trans  &trans  &trans  &trans  &trans
+        &kp ESC       &kp N7  &kp N8  &kp N9  &kp T   &none   &none   &none   &none  &none
+        &kp N0        &kp N4  &kp N5  &kp N6  &kp G   &none   &none   &none   &none  &none
+        &kp LEFT_ALT  &kp N1  &kp N2  &kp N3  &kp B   &none   &none   &none   &none  &none
+                              &trans  &trans  &trans  &trans  &trans  &tog 2
       >;
     };
 
