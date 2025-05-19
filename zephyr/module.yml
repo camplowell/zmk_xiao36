@@ -1,3 +1,4 @@
+name: zmk-keyboard-small36
 build:
   settings:
     board_root: .

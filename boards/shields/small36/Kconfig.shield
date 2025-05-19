@@ -7,7 +7,7 @@ config SHIELD_SMALL36_RIGHT
 if SHIELD_SMALL36_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "Lowell's Small36"
+	default "Small36"
 
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
