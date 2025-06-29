@@ -21,6 +21,7 @@
       bindings = <&kp>, <&sk>;
 
       hold-while-undecided;
+      hold-while-undecided-linger;
     };
 
     multi_sft: multi_sft {
